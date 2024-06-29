@@ -3,10 +3,10 @@ import "./App.css";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Header from "../components/header";
 import SideBar from "../components/SideBar";
-import Poster from "../components/Poster";
+// import Poster from "../components/Poster";
 import Logo from "../components/Logo";
 import Slider from "../components/Slider";
-import Tab from "../components/Tab";
+import ProductSection from "../components/productSection";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,11 +19,12 @@ function App() {
       </Header>
 
       <SideBar isOpen={isOpen}></SideBar>
-      <Poster />
+      {/* <Poster /> */}
 
-
+    
       <Slider />
-      <Tab />
+      <ProductSection/>
+      
     </>
   );
 }
