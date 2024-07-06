@@ -10,8 +10,9 @@ export default function ProductSection() {
   return (
     <>
       <div
+      datatype="products-item"
         onClick={selectedItem}
-        className="w-[96%] mx-auto rounded-lg min-h-14 bg-slate-950 border border-blue-400 mt-6 flex justify-between items-center px-2 text-sm sm:text-base font-Vazir md:text-lg text-emerald-200"
+        className="w-[96%] mx-auto rounded-lg min-h-14 bg-slate-950 border border-blue-400 mt-6 flex justify-between items-center px-2 text-sm sm:text-base font-Vazir md:text-lg text-emerald-200 "
       >
         {products.map((product) => (
           <div

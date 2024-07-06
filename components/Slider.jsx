@@ -46,25 +46,26 @@
 //   );
 // }
 
-import { Carousel  } from "antd";
+import { Carousel } from "antd";
+
+const pics = ["/pics/0.jpg", "/pics/Shahin2.jpg", "/pics/000.png"];
 
 export default function Slider() {
   return (
     <>
-
-    <div className="w-[97%] lg:w-1/3 border border-emerald-900 mx-auto mt-4 overflow-hidden rounded-xl ">
-      <Carousel autoplay draggable={true} arrows>
-        <div>
-          <img className="w-full " src="/pics/0.jpg" alt="" />
-        </div>
-        <div>
-          <img className=" h-52" src="/pics/Shahin2.jpg" alt="" />
-        </div>
-        <div>
-          <img className="w-full " src="/pics/000.png" alt="" />
-        </div>
-      </Carousel>
-    </div>
+      <div className="w-[97%] lg:w-1/3 border border-emerald-900 mx-auto mt-4 overflow-hidden rounded-xl ">
+        <Carousel autoplay draggable={true} arrows>
+          {pics.map((item) => (
+            <div key={item}>
+              <img
+                src={item}
+                className={`${item.includes("Shahin2") ? "" : "w-full"}  h-52`}
+                alt=""
+              />
+            </div>
+          ))}
+        </Carousel>
+      </div>
     </>
   );
 }

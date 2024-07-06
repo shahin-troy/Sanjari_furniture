@@ -10,7 +10,12 @@
   background-color: #060d25 !important;
   direction: rtl;
 }
-
+*{
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
 /* nav-icon-5 */
 .nav-icon-5 {
   width: 30px;
@@ -23,7 +28,7 @@
   transform: scale(.8);
 }
 .nav-icon-5 span {
-  background-color: rgb(255, 255, 255);
+  background-color: gold;
   position: absolute;
   border-radius: 2px;
   transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
@@ -62,4 +67,24 @@
   border-color: rgba(240, 237, 63, 0.719) !important;
   background-color: rgba(1, 0, 39, 0.685);
   border-width: .1rem !important;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgb(10, 156, 156) !important;
+}
+::-webkit-scrollbar{
+  background-color: #060d25;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: rgb(2, 15, 190);
+  border-radius: 100px;
+}
+.products-navbar{
+  background: rgb(0,0,0);
+  background: linear-gradient(225deg, rgba(0,0,0,1) 10%, rgba(26,0,98,1) 100%);
+}
+.prev-btn{
+  background: rgb(0,0,0);
+  content: 's';
 }
