@@ -1,52 +1,89 @@
-import { useState } from "react";
-import "./App.css";
-import HamburgerMenu from "../components/HamburgerMenu";
-import Header from "../components/header";
-import SideBar from "../components/SideBar";
-import Poster from "../components/Poster";
-import Logo from "../components/Logo";
-// import Slider from "../components/Slider";
-import ProductSection from "../components/productSection";
-import MattressSection from "../components/MattressSection";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "../pages/HomePage";
+import MattressItem from "../pages/MattressItem";
 
+import { useNavigationType } from "react-router-dom";
+import { useEffect } from "react";
 
-const bonelMattress = [
-  { id: 1, type: "bonel", name: "بونل 1", src: "/mattress/bonel.jpg" },
-  { id: 2, type: "bonel", name: "بونل 2", src: "/mattress/bonel.jpg" },
-  { id: 3, type: "bonel", name: "بونل 3", src: "/mattress/bonel.jpg" },
-  { id: 4, type: "bonel", name: "بونل 4", src: "/mattress/bonel.jpg" },
-  { id: 5, type: "bonel", name: "بونل5", src: "/mattress/bonel.jpg" },
+function ScrollToTop() {
+  const navigationType = useNavigationType();
+
+  useEffect(() => {
+    if (navigationType !== "POP") {
+      window.scrollTo(0, 0);
+    }
+  }, [navigationType]);
+
+  return null;
+}
+
+const ultraMattress = [
+  {
+    id: 0,
+    type: "ultraPlus",
+    name: "اولترا پلاس + محافظ",
+    min: "14,190,000",
+    max: "31,540,000",
+    src: "/mattress/plus.jpg",
+  },
+  {
+    id: 1,
+    type: "ultra1",
+    name: "اولترا 1",
+    min: "8,500,000",
+    max: "18,890,000",
+    src: "/mattress/ultra.jpg",
+  },
+  {
+    id: 2,
+    type: "ultra2",
+    name: "اولترا 2",
+    min: "7,500,000",
+    max: "16,670,000",
+    src: "/mattress/ultra.jpg",
+  },
+  {
+    id: 3,
+    type: "ultra3",
+    name: "اولترا 3",
+    min: "6,550,000",
+    max: "14,560,000",
+    src: "/mattress/ultra.jpg",
+  },
+  {
+    id: 4,
+    type: "ultra4",
+    name: "اولترا 4",
+    min: "5,900,000",
+    max: "13,120,000",
+    src: "/mattress/ultra.jpg",
+  },
+  {
+    id: 5,
+    type: "ultra5",
+    name: "اولترا 5",
+    min: "5,300,000",
+    max: "11,780,000",
+    src: "/mattress/ultra.jpg",
+  },
 ];
-const poster = [
-  { id: 0, src: "/poster/mohit0.jpg" },
-  { id: 1, src: "/poster/mohit1.jpg" },
-  { id: 2, src: "/poster/mohit4.jpg" },
-  { id: 3, src: "/poster/mohit2.jpg" },
-  { id: 4, src: "/poster/photo_2024-07-01_00-18-46.jpg" },
-  { id: 5, src: "/poster/mohit-up-1.jpg" },
-  { id: 6, src: "/poster/mohit-up-2.jpg" },
-]
-console.log(bonelMattress);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/mattressItem/:id",
+    element: (
+      <>
+        {" "}
+        <ScrollToTop /> <MattressItem ultraMattress={ultraMattress} />{" "}
+      </>
+    ),
+  },
+]);
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <>
-      <Header>
-        <Logo />
-        <HamburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
-      </Header>
-
-      <SideBar isOpen={isOpen}></SideBar>
-      <Poster bonelMattress={poster} />
-
-      <MattressSection  />
-
-      {/* <Slider /> */}
-      <ProductSection />
-
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

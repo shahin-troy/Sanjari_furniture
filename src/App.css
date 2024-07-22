@@ -9,6 +9,12 @@
 :root {
   background-color: #060d25 !important;
   direction: rtl;
+  --swiper-pagination-color: rgb(130, 4, 233);
+  --swiper-pagination-bullet-inactive-color: #00abfa;
+  --swiper-pagination-bullet-inactive-opacity: .43;
+  --swiper-pagination-bullet-size: 8px;
+  --swiper-pagination-bullet-width: 8px;
+  --swiper-pagination-bullet-height: 8px;
 }
 *{
   -webkit-user-select: none; /* Safari */
@@ -16,6 +22,7 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
 /* nav-icon-5 */
 .nav-icon-5 {
   width: 30px;
@@ -84,7 +91,6 @@
   background: rgb(0,0,0);
   background: linear-gradient(225deg, rgba(0,0,0,1) 10%, rgba(26,0,98,1) 100%);
 }
-.prev-btn{
-  background: rgb(0,0,0);
-  content: 's';
+.wave{
+  filter: drop-shadow(1px 25px 8px rgba(2, 38, 199, 0.24));
 }

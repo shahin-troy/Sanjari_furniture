@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom"
 
 export default function Logo() {
   return (
-    <img src="/pics/000.png" alt="" className="w-36  " />
+    <Link to={"/"} >
+    <img src="/pics/0.png" alt="" className="w-44  " />
+    </Link>
   )
 }

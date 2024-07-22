@@ -7,18 +7,21 @@ export default function ProductSection() {
     ss.forEach((item) => item.classList.remove("active"));
     e.target.classList.add("active");
   }
+
   return (
     <>
       <div
-      datatype="products-item"
+        datatype="products-item"
         onClick={selectedItem}
-        className="w-[96%] mx-auto rounded-lg min-h-14 bg-slate-950 border border-blue-400 mt-6 flex justify-between items-center px-2 text-sm sm:text-base font-Vazir md:text-lg text-emerald-200 "
+        className="w-[96%] mx-auto rounded-full py-2 bg-slate-950 border-yellow-300 border-t-0 border-b-0 border-3 mt-6 flex justify-between items-center px-2 text-sm sm:text-base font-Vazir md:text-lg text-emerald-200 "
       >
         {products.map((product) => (
           <div
             datatype="products-item"
             key={product}
-            className={` ${product=="تشک"&& "active" } px-3 py-1 transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
+            className={` ${
+              product == "تشک" && "active"
+            } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
           >
             {product}{" "}
           </div>
