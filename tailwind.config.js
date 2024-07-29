@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -19,5 +18,5 @@ export default {
     },
   },
   darkMode: "class",
-  plugins: [nextui()],
+  plugins: [],
 }
