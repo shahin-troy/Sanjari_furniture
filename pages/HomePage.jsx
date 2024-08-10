@@ -4,6 +4,8 @@ import Poster from "../components/Poster";
 import ProductSection from "../components/productSection";
 import MattressSection from "../components/MattressSection";
 import Footer from "../components/Footer";
+import LunchTable from "../components/lunchTable";
+import { useState } from "react";
 
 const ultraMattress = [
   {
@@ -109,15 +111,19 @@ const poster = [
 ];
 
 export default function HomePage() {
+  const [section, setSection] = useState("mattress");
   return (
     <>
       <Header />
       <Poster poster={poster} />
-      <ProductSection />
-      <MattressSection
-        bonelMattress={bonelMattress}
-        ultraMattress={ultraMattress}
-      />
+      <ProductSection section={section} setSection={setSection} />
+      {section == "mattress" && (
+        <MattressSection
+          bonelMattress={bonelMattress}
+          ultraMattress={ultraMattress}
+        />
+      )}
+      {section == "lunchTable" && <LunchTable />}
       <Footer />
     </>
   );
