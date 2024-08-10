@@ -33,7 +33,7 @@ export default function MattressSection({ ultraMattress, bonelMattress }) {
 
       <div className="flex items-center mt-12 border-b-2 border-teal-400 font-Vazir">
         <img src="/svg/bonel.svg" alt="" className="w-20 " />
-        <div data-aos="zoom-in" data-aos-duration="800" className="mr-2">
+        <div data-aos="fade-left" data-aos-duration="800" className="mr-2">
           <span className="text-xl text-yellow-200">تشک های بونل</span>
           <br />
           <span className="text-sm text-teal-300">فنر متصل</span>
