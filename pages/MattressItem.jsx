@@ -28,24 +28,24 @@ export default function MattressItem() {
   useEffect(() => {
     async function getItems() {
       let { data } = await supabase
-      .from(`${findingType}`)
-      .select("*")
-      .eq("type", mattressType);
-      
-      setMattress(data);
+        .from(`${findingType}`)
+        .select("*")
+        .eq("type", mattressType);
+
+      setMattress(data[0]);
     }
     getItems();
   }, [findingType, mattressType]);
-  
+
   console.log(mattress);
   return (
     <>
       <Header />
       <main className="w-full h-fit  mt-20">
         <div className="w-full  text-yellow-100 mx-auto min-h-12 py-4 bg-stone-950 font-Vazir flex justify-center items-center text-2xl">
-          { mattress[0]?.name}
+          {mattress.name}
         </div>
-
+ 
         <Swiper
           className="w-[97%]  h-fit"
           dir="ltr"
@@ -104,6 +104,15 @@ export default function MattressItem() {
         <li className="list-disc text-teal-200/85">ضمانت 9 سال</li>
         <li className="list-disc text-teal-200/85">ارتفاع 1 ± 35 سانتیمتر</li>
       </ul>
+      <section className="w-full border flex justify-between px-2 py-4 flex-wrap h-fit gap-4 font-Vazir">
+        <div className="size"><span>200x90</span><span >{mattress.sm} تومان </span>  </div>
+        <div className="size"><span>200x100</span><span>{mattress.md} تومان </span> </div>
+        <div className="size"><span>200x120</span><span>{mattress.lg} تومان </span> </div>
+        <div className="size"><span>200x140</span><span>{mattress.xl} تومان </span> </div>
+        <div className="size"><span>200x160</span><span>{mattress.xxl} تومان </span> </div>
+        <div className="size"><span>200x180</span><span>{mattress.xxxl} تومان </span> </div>
+        <div className="size"><span>200x200</span><span>{mattress.xxxxl} تومان </span> </div>
+      </section>
     </>
   );
 }
