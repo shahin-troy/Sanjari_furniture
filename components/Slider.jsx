@@ -38,7 +38,7 @@ export default function Slider({poster}) {
         // }}
         navigation
       >
-        {poster.map((item) => (
+        {poster&& poster.map((item) => (
           <SwiperSlide  key={item.id}>
           <Link to={`mattressItem/${item.type}`} >
 

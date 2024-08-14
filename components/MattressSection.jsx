@@ -2,6 +2,7 @@
 import Slider from "./Slider";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { ultraMattress,bonelMattress } from "../src/staticData";
 
 AOS.init();
 
@@ -10,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-export default function MattressSection({ ultraMattress, bonelMattress }) {
+export default function MattressSection() {
+  
   return (
     <>
       <div className="py-2 mt-8 pt-7 bg-slate-950 border-teal-300/20 border-t-1">
