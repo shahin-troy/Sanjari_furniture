@@ -6,6 +6,7 @@ import MattressSection from "../components/MattressSection";
 import Footer from "../components/Footer";
 import LunchTable from "../components/lunchTable";
 import { useState } from "react";
+import Banner from "../components/Banner";
 
 
 const poster = [
@@ -24,6 +25,7 @@ export default function HomePage() {
     <>
       <Header />
       <Poster poster={poster} />
+      <Banner/>
       <ProductSection section={section} setSection={setSection} />
       {section == "mattress" && (
         <MattressSection />
