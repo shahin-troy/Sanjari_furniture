@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import LunchTable from "../components/lunchTable";
 import { useState } from "react";
 import Banner from "../components/Banner";
+import Gramaphone from "../components/Gramaphone";
 
 
 const poster = [
@@ -31,6 +32,7 @@ export default function HomePage() {
         <MattressSection />
       )}
       {section == "lunchTable" && <LunchTable />}
+      {section =="gramaphone" && <Gramaphone/> }
       <Footer />
     </>
   );

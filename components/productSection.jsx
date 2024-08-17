@@ -42,14 +42,16 @@ export default function ProductSection({section,setSection}) {
           </div>
           <div
             datatype="products-item"
+            onClick={()=>setSection("gramaphone")}
             className={` ${
               section == "تشک" && "active"
             } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
           >
-صندلی
+گرامافون
           </div>
           <div
             datatype="products-item"
+
             className={` ${
               section == "تشک" && "active"
             } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
