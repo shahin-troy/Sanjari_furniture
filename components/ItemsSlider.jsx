@@ -11,7 +11,7 @@ import 'swiper/effect-utils'
 export default function ItemsSlider({ poster }) {
   return (
     <Swiper
-      className="w-[90%] max-w-96 mt-4 h-fit rounded-2xl"
+      className="w-[93%] mb-8  shadow-lg border-2 border-cyan-700 shadow-cyan-500/80 max-w-[27rem] mt-4 h-fit rounded-2xl"
       dir="ltr"
       effect="fade"
       loop={true}
@@ -24,7 +24,7 @@ export default function ItemsSlider({ poster }) {
           spaceBetween: 5,
         },
         700: {
-          slidesPerView: 3,
+          slidesPerView: 1,
           spaceBetween: 15,
         },
       }}
@@ -46,12 +46,14 @@ export default function ItemsSlider({ poster }) {
           <img src={item.src} key={item.id} alt="" className="w-full " />
           <p dir="rtl" className="absolute top-8 right-1 flex items-center bg-slate-950 text-teal-100 font-Vazir text-sm pt-1 pb-0.5 px-4 rounded-full">{item.price} تومان</p>
 
-          <span className="absolute bottom-9 right-0 font-Vazir text-yellow-300 bg-blue-600 px-3 rounded-s-full py-0.5"> :مشخصات  </span>
+          <span className="absolute bottom-12 right-0 font-Vazir text-teal-200 bg-slate-950 px-2 rounded-s-full py-0.5"> :مشخصات  </span>
 
-          <span className="absolute bottom-1 right-2 font-Vazir text-violet-200 bg-purple-950 px-3 rounded-full py-0.5"> usb port  </span>
-          <span className="absolute bottom-1 right-[6.5rem] font-Vazir text-yellow-100 bg-purple-950 px-3 rounded-full py-0.5"> بلوتوث  </span>
-          <span className="absolute bottom-1 left-2 font-Vazir text-yellow-100 bg-purple-950 px-3 rounded-full py-0.5"> رادیو  </span>
-          <span className="absolute bottom-1 right-44 font-Vazir text-yellow-100 bg-purple-950 px-3 rounded-full py-0.5"> گارانتی معتبر  </span>
+<div className="absolute bottom-3 flex flex-wrap justify-evenly w-full ">
+          <span className=" font-Vazir text-cyan-300 bg-slate-950 text-sm px-3 rounded-lg py-0.5 border-x-2 border-cyan-300"> گارانتی معتبر  </span>
+          <span className=" font-Vazir text-cyan-300 border-x-2 border-cyan-300 bg-slate-950 text-sm px-3 rounded-lg py-0.5"> usb port  </span>
+          <span className=" font-Vazir text-cyan-300 border-x-2 border-cyan-300 bg-slate-950 text-sm px-3 rounded-lg py-0.5"> بلوتوث  </span>
+          <span className=" font-Vazir text-cyan-300 border-x-2 border-cyan-300 bg-slate-950 text-sm px-3 rounded-lg py-0.5"> رادیو  </span>
+</div>
 
 
 
