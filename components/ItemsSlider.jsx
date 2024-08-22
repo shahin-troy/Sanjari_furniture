@@ -46,7 +46,7 @@ export default function ItemsSlider({ poster }) {
           <img src={item.src} key={item.id} alt="" className="w-full " />
           <p dir="rtl" className="absolute top-8 right-1 flex items-center bg-slate-950 text-teal-100 font-Vazir text-sm pt-1 pb-0.5 px-4 rounded-full">{item.price} تومان</p>
 
-          <span className="absolute bottom-12 right-0 font-Vazir text-teal-200 bg-slate-950 px-2 rounded-s-full py-0.5"> :مشخصات  </span>
+          <span className="absolute bottom-12 right-0 font-Vazir text-teal-200 bg-slate-950 px-4 rounded-s-full py-0.5 border-l-2 border-b-2 border-cyan-500"> :مشخصات  </span>
 
 <div className="absolute bottom-3 flex flex-wrap justify-evenly w-full ">
           <span className=" font-Vazir text-cyan-300 bg-slate-950 text-sm px-3 rounded-lg py-0.5 border-x-2 border-cyan-300"> گارانتی معتبر  </span>

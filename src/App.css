@@ -70,10 +70,11 @@
 }
 
 .active{
-  color: rgb(255, 255, 255);
-  border-color: rgba(240, 237, 63, 0.719) !important;
-  background-color: rgba(1, 0, 39, 0.685);
-  border-width: .1rem !important;
+  color: rgb(214, 246, 53);
+  /* border-color: rgba(240, 237, 63, 0.719) !important; */
+  box-shadow: 0 4px 4px -1px rgba(0, 255, 238, 0.787) !important;
+  background-color: rgb(4, 1, 55);
+  /* border-width: .1rem !important/ */
 }
 
 ::-webkit-scrollbar-track{
@@ -113,4 +114,15 @@ font-size: 18px;
   border-bottom: 2px solid red ;
   border-left: 2px solid red ;
   border-radius:16px; */
+}
+.sizing-box{
+  width: 30%;
+  margin-inline: auto;
+  margin-bottom: 2em;
+  height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  box-shadow: 0 4px 4px 0 skyblue;
 }

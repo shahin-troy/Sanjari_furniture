@@ -42,7 +42,7 @@ export default function MattressItem() {
     <>
       <Header />
       <main className="w-full h-fit  mt-20">
-        <div className="w-full  text-yellow-100 mx-auto min-h-12 py-4 bg-stone-950 font-Vazir flex justify-center items-center text-2xl">
+        <div className="w-full  text-yellow-100 mx-auto min-h-12 py-4 bg-stone-950 font-Vazir flex justify-center items-center text-2xl bg-gradient-to-t ">
           {mattress&& mattress.name}
         </div>
  
@@ -104,6 +104,7 @@ export default function MattressItem() {
         <li className="list-disc text-teal-200/85">ضمانت 9 سال</li>
         <li className="list-disc text-teal-200/85">ارتفاع 1 ± 35 سانتیمتر</li>
       </ul>
+      <div className="sizing-box font-Vazir">سایز های موجود</div>
       <section className="w-full border flex justify-between px-2 py-4 flex-wrap h-fit gap-4 font-Vazir">
         <div className="size"><span>200x90</span><span >{mattress&& mattress.sm} تومان </span>  </div>
         <div className="size"><span>200x100</span><span>{mattress&& mattress.md} تومان </span> </div>

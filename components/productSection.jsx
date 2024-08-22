@@ -14,13 +14,13 @@ export default function ProductSection({section,setSection}) {
       <div
         datatype="products-item"
         onClick={selectedItem}
-        className="w-[96%] mx-auto rounded-full py-2 bg-slate-950 border-yellow-300 border-t-0 border-b-0 border-3 mt-6 flex justify-between items-center px-2 text-sm sm:text-base font-Vazir md:text-lg text-emerald-200 "
+        className="w-[96%] mx-auto rounded-full py-2 bg-slate-950 border-yellow-300 border-t-0 border-b-0 border-3 mt-6 flex justify-around shadow-md shadow-teal-800 items-center px-2 text-sm sm:text-base font-Vazir md:text-lg text-emerald-200 "
       >
           <div onClick={()=>setSection("mattress")}
             datatype="products-item"
             className={` ${
               section == "mattress" && "active"
-            } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
+            } px-[10px] py-[6px] transition-all  shadow-sm shadow-cyan-400 rounded-full cursor-pointer sm:px-5`}
           >
             تشک
           </div>
@@ -28,7 +28,7 @@ export default function ProductSection({section,setSection}) {
             datatype="products-item"
             className={` ${
               section == "تشک" && "active"
-            } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
+            } px-[10px] py-[6px] transition-all shadow-sm shadow-cyan-400 rounded-full cursor-pointer sm:px-5`}
           >
 میز نهار خوری
           </div>
@@ -36,7 +36,7 @@ export default function ProductSection({section,setSection}) {
             datatype="products-item"
             className={` ${
               section == "تشک" && "active"
-            } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
+            } px-[10px] py-[6px] transition-all shadow-sm shadow-cyan-400 rounded-full cursor-pointer sm:px-5`}
           >
 مبل
           </div>
@@ -45,7 +45,7 @@ export default function ProductSection({section,setSection}) {
             onClick={()=>setSection("gramaphone")}
             className={` ${
               section == "تشک" && "active"
-            } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
+            } px-[10px] py-[6px] transition-all shadow-sm shadow-cyan-400 rounded-full cursor-pointer sm:px-5`}
           >
 گرامافون
           </div>
@@ -54,7 +54,7 @@ export default function ProductSection({section,setSection}) {
 
             className={` ${
               section == "تشک" && "active"
-            } px-[10px] py-[6px] transition-all border border-teal-600 rounded-full cursor-pointer sm:px-5`}
+            } px-[10px] py-[6px] transition-all shadow-sm shadow-cyan-400 rounded-full cursor-pointer sm:px-5`}
           >
 میزTV
           </div>
