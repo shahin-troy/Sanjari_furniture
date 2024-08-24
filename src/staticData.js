@@ -92,4 +92,46 @@ const bonelMattress = [
     src: "/mattress/bonel.jpg",
   },
 ];
-export {ultraMattress,bonelMattress}
+const medicalMattress = [
+  {
+    id: 0,
+    type: "medicalPlus",
+    name: "مدیکال پلاس + محافظ",
+    min: "14,190,000",
+    max: "31,540,000",
+    src: "/mattress/plus.jpg",
+  },
+  {
+    id: 1,
+    type: "medical1",
+    name: "مدیکال 1",
+    min: "8,600,000",
+    max: "19,120,000",
+    src: "/mattress/ultra.jpg",
+  },
+  {
+    id: 2,
+    type: "medical2",
+    name: "مدیکال 2",
+    min: "6,300,000",
+    max: "14,000,000",
+    src: "/mattress/ultra.jpg",
+  },
+  {
+    id: 3,
+    type: "medical3",
+    name: "مدیکال 3",
+    min: "5,800,000",
+    max: "12,890,000",
+    src: "/mattress/ultra.jpg",
+  },
+  {
+    id: 4,
+    type: "medical4",
+    name: "مدیکال 4",
+    min: "4,900,000",
+    max: "10,890,000",
+    src: "/mattress/ultra.jpg",
+  },
+];
+export {ultraMattress,bonelMattress,medicalMattress}
